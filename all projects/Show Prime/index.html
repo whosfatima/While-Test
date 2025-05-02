@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prime Finder</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+    input, button {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .result {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Find Prime Numbers Between Two Numbers</h2>
+  
+  <label>First Number:</label>
+  <input type="number" id="num1" />
+  <br/>
+  <label>Second Number:</label>
+  <input type="number" id="num2" />
+  <br/>
+  <button onclick="showPrimes()">Show Primes</button>
+  
+  <div class="result" id="result"></div>
+
+  <script>
+    function isPrime(n) {
+      if (n < 2) return false;
+      for (let i = 2; i < n; i++) {
+        if (n % i === 0) return false;
+      }
+      return true;
+    }
+
+    function showPrimes() {
+      let num1 = Number(document.getElementById("num1").value);
+      let num2 = Number(document.getElementById("num2").value);
+      let result = [];
+
+      if (num1 >= num2) {
+        document.getElementById("result").innerText = "First number must be smaller.";
+        return;
+      }
+
+      for (let i = num1 + 1; i < num2; i++) {
+        if (isPrime(i)) result.push(i);
+      }
+
+      document.getElementById("result").innerText =
+        result.length > 0 ? "Prime numbers: " + result.join(", ") : "No prime numbers found.";
+    }
+  </script>
+
+</body>
+</html>
