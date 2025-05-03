@@ -42,8 +42,7 @@ This is a simple and interactive mini project that calculates the sum of numbers
 
 ---
 
-## 📸 Screenshot (Optional)
-_Add a screenshot here if you'd like to showcase your project UI._
+## 📸   Demo[https://whosfatima.github.io/While-Test/]
 
 ---
 
