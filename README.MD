@@ -42,7 +42,10 @@ This is a simple and interactive mini project that calculates the sum of numbers
 
 ---
 
-## 📸   Demo[https://whosfatima.github.io/While-Test/]
+## 📸 Demo
+
+👇 You can try the live demo here:  
+**[👉 Demo Link](https://whosfatima.github.io/show-Primes/)**
 
 ---
 
